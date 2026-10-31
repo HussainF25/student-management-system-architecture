@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 584" width="1140" height="876" font-family="Helvetica, Arial, sans-serif" font-size="13"><rect width="760" height="584" fill="#FFFFFF"/><text x="24" y="34" font-size="15" font-weight="600" fill="#1B2430">Student Management System: 3-tier core + event-driven notifications</text>
+<defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#7C838F"/></marker><marker id="arp" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#C0631F"/></marker></defs>
+<g fill="none" stroke="#7C838F" stroke-width="1.4">
+<path d="M274 112V148" marker-end="url(#ar)"/><path d="M274 204V240" marker-end="url(#ar)"/><path d="M274 296V332" marker-end="url(#ar)"/><path d="M224 404V448" marker-end="url(#ar)"/><path d="M378 404V448" marker-end="url(#ar)"/><path d="M410 404V418H640V448" marker-end="url(#ar)"/>
+</g>
+<g fill="none" stroke="#C0631F" stroke-width="1.4" stroke-dasharray="5 4">
+<path d="M420 360H500" marker-end="url(#arp)"/><path d="M618 332V296" marker-end="url(#arp)"/><path d="M618 240V204" marker-end="url(#arp)"/><path d="M618 148V84H420" marker-end="url(#arp)"/>
+</g>
+<g transform="translate(0,0)" stroke-width="1.4">
+<rect x="128" y="56" width="292" height="56" rx="8" fill="#FFFFFF" stroke="#7C838F"/>
+<rect x="128" y="148" width="292" height="56" rx="8" fill="#DCE7FB" stroke="#5B8DEF"/>
+<rect x="128" y="240" width="292" height="56" rx="8" fill="#DCE7FB" stroke="#5B8DEF"/>
+<rect x="128" y="332" width="292" height="72" rx="8" fill="#DCE7FB" stroke="#5B8DEF"/>
+<rect x="128" y="448" width="192" height="56" rx="8" fill="#FFFFFF" stroke="#7C838F"/>
+<rect x="336" y="448" width="192" height="56" rx="8" fill="#FFFFFF" stroke="#7C838F"/>
+<rect x="544" y="448" width="192" height="56" rx="8" fill="#FFFFFF" stroke="#7C838F"/>
+<rect x="500" y="332" width="236" height="56" rx="8" fill="#FBE3CF" stroke="#C0631F" stroke-width="2"/>
+<rect x="500" y="240" width="236" height="56" rx="8" fill="#FFF4EA" stroke="#C0631F"/>
+<rect x="500" y="148" width="236" height="56" rx="8" fill="#FFF4EA" stroke="#C0631F"/>
+<rect x="128" y="524" width="608" height="40" rx="8" fill="#ECEAE3" stroke="#7C838F"/>
+</g>
+<g fill="#5B6470" font-size="11.5" font-weight="600">
+<text x="24" y="88">Users</text><text x="24" y="180">Presentation</text><text x="24" y="322">Application</text><text x="24" y="480">Data</text><text x="500" y="136" fill="#C0631F">Asynchronous path</text>
+</g>
+<g fill="#1B2430" font-weight="600" text-anchor="middle">
+<text x="274" y="80">Students · Teachers · Admins</text><text x="274" y="172">Web frontend (React)</text><text x="274" y="264">API Gateway + load balancer</text><text x="274" y="356">Backend API (stateless servers)</text><text x="224" y="472">Redis cache</text><text x="432" y="472">PostgreSQL (RDS)</text><text x="640" y="472">S3 file storage</text><text x="618" y="356">SQS queue + DLQ</text><text x="618" y="264">Lambda notifier</text><text x="618" y="172">Amazon SES / SNS</text>
+</g>
+<g fill="#5B6470" font-size="11.5" text-anchor="middle">
+<text x="274" y="96">Web browser or mobile phone</text><text x="274" y="188">Hosted on S3 + CloudFront CDN</text><text x="274" y="280">JWT auth check, routing, scaling</text><text x="274" y="372">Student · Course · Attendance · Results</text><text x="274" y="388">Business rules and validation</text><text x="224" y="488">Hot data: courses, results</text><text x="432" y="488">Main records, standby copy</text><text x="640" y="488">Uploads and PDF transcripts</text><text x="618" y="372">Buffers events; failures go to DLQ</text><text x="618" y="280">Builds and sends each message</text><text x="618" y="188">Delivers email and SMS</text>
+</g>
+<text x="432" y="548" text-anchor="middle" fill="#1B2430">CloudWatch: logs, metrics and alarms for every component</text>
+<g fill="#5B6470" font-size="11.5">
+<text x="282" y="134">HTTPS</text><text x="282" y="226">REST API calls (JSON)</text><text x="282" y="318">routed request</text><text x="232" y="440">check cache</text><text x="386" y="440">SQL</text><text x="648" y="440">files</text>
+</g>
+<g fill="#C0631F" font-size="11.5">
+<text x="460" y="352" text-anchor="middle">event</text><text x="626" y="318">triggers</text><text x="626" y="226">send</text><text x="519" y="76" text-anchor="middle">email / SMS to student</text>
+</g>
+</svg>
